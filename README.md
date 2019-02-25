@@ -9,7 +9,7 @@
 Clone the repository to your local machine
 
 ```
-git clone https://github.com/endormi/django-gamesAPI.git
+git clone https://github.com/endormi/django-listAPI.git
 ```
 
 Create the database
@@ -24,7 +24,7 @@ Makemigrations
 python manage.py makemigrations
 ```
 
-See [0001_initial.py](https://github.com/endormi/django-gamesAPI/blob/master/games/migrations/0001_initial.py).
+See [0001_initial.py](https://github.com/endormi/django-listAPI/blob/master/games/migrations/0001_initial.py).
 
 ### Install requirements
 
@@ -147,4 +147,4 @@ It's the same request as the curl command, but in this case HTTP utility will di
 
 ## License
 
-The source code is released under the [MIT License](https://github.com/endormi/django-gamesAPI/blob/master/LICENSE).
+The source code is released under the [MIT License](https://github.com/endormi/django-listAPI/blob/master/LICENSE).

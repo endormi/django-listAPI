@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'games.apps.GamesConfig',
+    'list.apps.GamesConfig',
 ]
 
 MIDDLEWARE = [
@@ -39,7 +39,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'gamesapi.urls'
+ROOT_URLCONF = 'listapi.urls'
 
 TEMPLATES = [
     {
@@ -57,7 +57,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'gamesapi.wsgi.application'
+WSGI_APPLICATION = 'listapi.wsgi.application'
 
 
 # Database
@@ -108,12 +108,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
-TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
-
-NOSE_ARGS = [
-    '--with-coverage',
-    '--cover-erase',
-    '--cover-inclusive',
-    '--cover-package=games',
-]

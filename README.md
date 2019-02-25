@@ -130,6 +130,8 @@ etc.
 
 #### Using HTTPIE
 
+HTTPIE is included in requirements.txt
+
 ```
 http :8000/games/
 ```

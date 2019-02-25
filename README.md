@@ -1,6 +1,6 @@
 [![django-rest-framework](https://www.django-rest-framework.org/img/logo.png)](https://www.django-rest-framework.org/)
 
-# django-gamesAPI
+# django-listAPI
 
 > API that interacts with a database and manages serialization and deserialization using django rest framework.
 

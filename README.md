@@ -96,6 +96,53 @@ if new_game_serializer.is_valid():new_game = new_game_serializer.save()
 print(new_game.game)
 ```
 
+### HTTP Requests
+
+Running the development server
+
+```
+python manage.py runserver
+```
+
+#### Using [Curl](https://curl.haxx.se/download.html)
+
+```
+curl -X GET http://localhost:8000/games/
+```
+
+Example response for the HTTP
+
+```
+curl -iX GET http://localhost:8000/games/
+```
+
+You should see something like this:
+
+```
+HTTP/1.0 200 OK
+Date: Mon, 25 Feb 2019 ...
+Server: WSGIServer/0.2 CPython/3.7.2
+Content-Type: application/JSON
+etc.
+```
+
+> Also you should see details for the game objects
+
+#### Using HTTPIE
+
+```
+http :8000/games/
+```
+
+> You should see similar http response
+
+```
+http GET :8000/games/
+```
+
+It's the same request as the curl command, but in this case HTTP utility will display a colorized output and uses multiple lines to display the JSON response.
+
+
 ## License
 
 The source code is released under the [MIT License](https://github.com/endormi/django-gamesAPI/blob/master/LICENSE).

@@ -1,5 +1,7 @@
 __pycache__/
 
+.vscode
+
 # Django stuff:
 *.log
 local_settings.py

@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from games import views
+from list import views
 
 # Regex url pattern
 urlpatterns = [

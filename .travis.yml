@@ -19,7 +19,6 @@ services:
 
 before_script:
   - touch travis_ci_db # creates a new file called `travis_ci_db`. SQLite databases can be created as simple flat files
-  - python manage.py migrate
 
 # command to run tests
 script:

@@ -4,8 +4,8 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from rest_framework import status
-from games.models import Game
-from games.serializers import GameSerializer
+from list.models import Game
+from list.serializers import GameSerializer
 
 class JSONResponse(HttpResponse):
     def __init__(self, data, **kwargs):

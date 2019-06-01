@@ -1,5 +1,3 @@
-[![django-rest-framework](https://www.django-rest-framework.org/img/logo.png)](https://www.django-rest-framework.org/)
-
 # django-listAPI
 
 [![Build Status](https://travis-ci.org/endormi/django-listAPI.svg?branch=master)](https://travis-ci.org/endormi/django-listAPI)

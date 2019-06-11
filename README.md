@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/endormi/django-listAPI.svg?branch=master)](https://travis-ci.org/endormi/django-listAPI)
 [![Python Version](https://img.shields.io/badge/python-3.7.2-brightgreen.svg?)](https://www.python.org/downloads/)
-[![Django Version](https://img.shields.io/badge/django-2.1.7-brightgreen.svg?)](https://www.djangoproject.com/download/)
+[![Django Version](https://img.shields.io/badge/django-2.1.9-brightgreen.svg?)](https://www.djangoproject.com/download/)
 ![PyPI - Status](https://img.shields.io/pypi/status/django.svg)
 
 > API that interacts with a database and manages serialization and deserialization using django rest framework.

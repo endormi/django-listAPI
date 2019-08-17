@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/endormi/django-listAPI.svg?branch=master)](https://travis-ci.org/endormi/django-listAPI)
 [![Python Version](https://img.shields.io/badge/python-3.7.2-brightgreen.svg?)](https://www.python.org/downloads/)
-[![Django Version](https://img.shields.io/badge/django-2.1.9-brightgreen.svg?)](https://www.djangoproject.com/download/)
+[![Django Version](https://img.shields.io/badge/django-2.1.7-brightgreen.svg?)](https://www.djangoproject.com/download/)
 ![PyPI - Status](https://img.shields.io/pypi/status/django.svg)
 
 > API that interacts with a database and manages serialization and deserialization using django rest framework.
@@ -11,13 +11,13 @@
 
 Clone the repository to your local machine
 
-```bash
+```sh
 git clone https://github.com/endormi/django-listAPI.git
 ```
 
 Create the database
 
-```bash
+```sh
 python manage.py migrate
 ```
 
@@ -29,13 +29,13 @@ python manage.py makemigrations
 
 ### Install requirements
 
-```bash
+```sh
 pip install -r requirements.txt
 ```
 
 ### Launch the interactive shell
 
-```bash
+```sh
 python manage.py shell
 ```
 
@@ -51,24 +51,28 @@ from games.models import Game
 from games.serializers import GameSerializer
 ```
 
-Two instances of the game model:
+Three instances of the game model:
 
 ```python
 gamedatetime = timezone.make.aware(datetime.now(), timezone.get_current_timezone())
-game1 = Game(name='Smurfs Jungle', release_date=gamedatetime, game_category='2D mobile arcade', played=False)
+game1 = Game(name='Example 1', release_date=gamedatetime, game_category='Example category', played=False)
 game1.save()
-game2 = Game(name='Angry Birds RPG', release_date=gamedatetime, game_category='3D RPG', played=False)
+game2 = Game(name='Example 2', release_date=gamedatetime, game_category='Example category', played=False)
 game2.save()
+game3 = Game(name='Example 3', release_date=gamedatetime, game_category='Example category', played=False)
+game3.save()
 ```
 
-Serialize the first game instance (game1):
+Serialize game instances:
 
 ```python
 game_serializer = GameSerializer(game1)
 print(game_serializer1.data)
+game_serializer = GameSerializer(game2)
+print(game_serializer2.data)
+game_serializer = GameSerializer(game3)
+print(game_serializer3.data)
 ```
-
-**game2** serialization is the same.
 
 ##### Rendering the attributes into JSON
 
@@ -76,6 +80,10 @@ print(game_serializer1.data)
 renderer = JSONRenderer()
 rendered_game1 = renderer.render(game_serializer1.data)
 print(rendered_game1)
+rendered_game2 = renderer.render(game_serializer2.data)
+print(rendered_game2)
+rendered_game3 = renderer.render(game_serializer3.data)
+print(rendered_game3)
 ```
 
 #### Deserialization
@@ -89,37 +97,29 @@ parsed_new_game = parse.parse(stream_for_new_game)
 print(parsed_new_game)
 ```
 
-> Fully populated game instance
-
-```python
-new_game_serializer = GameSerializer(data=parsed_new_game)
-if new_game_serializer.is_valid():new_game = new_game_serializer.save()
-print(new_game.game)
-```
-
 ### HTTP Requests
 
-Running the development server
+Running the development server:
 
-```bash
+```sh
 python manage.py runserver
 ```
 
 #### Using [Curl](https://curl.haxx.se/download.html)
 
-```bash
+```sh
 curl -X GET http://localhost:8000/games/
 ```
 
-Example response for the HTTP
+Example response for the HTTP:
 
-```bash
+```sh
 curl -iX GET http://localhost:8000/games/
 ```
 
 You should see something like this:
 
-```bash
+```sh
 HTTP/1.0 200 OK
 Date: Mon, 25 Feb 2019 ...
 Server: WSGIServer/0.2 CPython/3.7.2
@@ -131,15 +131,15 @@ etc.
 
 #### Using HTTPIE
 
-HTTPIE is included in requirements.txt
-
-```bash
+```sh
 http :8000/games/
 ```
 
+HTTPIE is included in requirements.txt
+
 > You should see similar http response
 
-```bash
+```sh
 http GET :8000/games/
 ```
 

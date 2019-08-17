@@ -1,12 +1,12 @@
 language: python
-# PIP is a package manager for Python packages and/or modules.
+
 cache: pip
 
 python:
   - 3.7.2
   
 env:
-  - DJANGO_VERSION==2.1.9
+  - DJANGO_VERSION==2.1.7
 
 dist:
   - xenial
@@ -18,9 +18,8 @@ services:
   - db.sqlite3
 
 before_script:
-  - touch travis_ci_db # creates a new file called `travis_ci_db`. SQLite databases can be created as simple flat files
+  - touch travis_ci_db
   - python manage.py migrate
 
-# command to run tests
 script:
   - python manage.py test

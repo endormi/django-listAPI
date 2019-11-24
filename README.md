@@ -3,28 +3,21 @@
 [![Build Status](https://travis-ci.org/endormi/django-listAPI.svg?branch=master)](https://travis-ci.org/endormi/django-listAPI)
 [![Python Version](https://img.shields.io/badge/python-3.7.4-brightgreen.svg?)](https://www.python.org/downloads/)
 [![Django Version](https://img.shields.io/badge/django-2.2.4-brightgreen.svg?)](https://www.djangoproject.com/download/)
-![PyPI - Status](https://img.shields.io/pypi/status/django.svg)
 
 > API that interacts with a database and manages serialization and deserialization using django rest framework.
 
 ## Running the Project Locally
 
-Clone the repository to your local machine
+Clone the repository to your local machine:
 
 ```sh
 git clone https://github.com/endormi/django-listAPI.git
 ```
 
-Create the database
+Create the database:
 
 ```sh
 python manage.py migrate
-```
-
-Makemigrations
-
-```bash
-python manage.py makemigrations
 ```
 
 ### Install requirements
@@ -144,7 +137,6 @@ http GET :8000/games/
 ```
 
 It's the same request as the curl command, but in this case HTTP utility will display a colorized output and uses multiple lines to display the JSON response.
-
 
 ## License
 

@@ -1,4 +1,4 @@
-Django>=2.2.4
+Django>=3.0
 djangorestframework>=3.9.1
 requests>=2.21.0
 httpie>=1.0.3

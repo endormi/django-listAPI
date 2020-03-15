@@ -4,7 +4,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.7.4-brightgreen.svg?)](https://www.python.org/downloads/)
 [![Django Version](https://img.shields.io/badge/django-3.0-brightgreen.svg?)](https://www.djangoproject.com/download/)
 
-> API that interacts with a database and manages serialization and deserialization using django rest framework.
+> API that interacts with a database and manages serialization and deserialization using django-rest-framework.
 
 ## Running the Project Locally
 
@@ -20,24 +20,14 @@ Create the database:
 python manage.py migrate
 ```
 
-### Install requirements
-
 ```sh
 pip install -r requirements.txt
 ```
-
-### HTTP Requests
 
 Running the development server:
 
 ```sh
 python manage.py runserver
-```
-
-Use Postman or something similar:
-
-```
-http://localhost:8000/games/
 ```
 
 ## License
